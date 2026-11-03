@@ -9,7 +9,7 @@ This is temporary hosting while the iOS app runs on the Google My Maps data. Whe
 | File | What it does |
 |---|---|
 | [`.well-known/apple-app-site-association`](.well-known/apple-app-site-association) | Tells iOS that `/spot/*` links open the app (team `29W28ZG86B`) and its App Clip. Keep it matching the server's copy in `pb_hooks/links/`. |
-| [`scripts/build-spot-pages.js`](scripts/build-spot-pages.js) | Downloads the map's KML and builds a page per spot at `/spot/<code>/<slug>` (and `/spot/<code>`), with the spot's name, description and photo for previews in Messages. Codes and slugs follow the app's rules (`Spot.shortCode` and `Spot.slug`). |
+| [`scripts/build-spot-pages.js`](scripts/build-spot-pages.js) | Downloads the map's KML and builds a page per spot at `/spot/<code>/<slug>` (as `<slug>.html`, so there's no redirect) and `/spot/<code>`, with the spot's name, description and photo for previews in Messages. Codes and slugs follow the app's rules (`Spot.shortCode` and `Spot.slug`). |
 | [`404.html`](404.html) | The download page with the App Clip card, for any link without a page (an unknown spot, an old slug, `/map`, `/add`). |
 | [`index.html`](index.html) | Sends visitors to [sidewalkjoy.com](https://www.sidewalkjoy.com/). |
 | [`landing.css`](landing.css) | The download page's look. |

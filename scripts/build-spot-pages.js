@@ -150,9 +150,11 @@ async function main() {
     seen.add(code)
     const slug = slugify(spot.name)
     const html = page(spot, `${SITE}/spot/${code}/${slug}`)
-    // /spot/<code>/<slug> is what the app shares; /spot/<code> also works.
-    fs.mkdirSync(path.join(OUT, "spot", code, slug), { recursive: true })
-    fs.writeFileSync(path.join(OUT, "spot", code, slug, "index.html"), html)
+    // /spot/<code>/<slug> is what the app shares. Pages serves <slug>.html
+    // there directly; a <slug>/index.html would cost a redirect to add a "/".
+    // /spot/<code> also works (after a redirect to /spot/<code>/).
+    fs.mkdirSync(path.join(OUT, "spot", code), { recursive: true })
+    fs.writeFileSync(path.join(OUT, "spot", code, slug + ".html"), html)
     fs.writeFileSync(path.join(OUT, "spot", code, "index.html"), html)
   }
   console.log(`${seen.size} spot pages -> ${path.relative(process.cwd(), OUT) || "."}`)
