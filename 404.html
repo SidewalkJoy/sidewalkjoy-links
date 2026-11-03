@@ -6,33 +6,21 @@
 <!-- Spot links (/spot/...), /map and /add land here: GitHub Pages serves this
      page for every path it doesn't have. People with the app never see it;
      the link opens the app instead (/.well-known/apple-app-site-association).
-     Once the app is on the App Store, add "app-id=<id>, " before
-     app-clip-bundle-id, and point the button at its App Store page. -->
-<meta name="apple-itunes-app" content="app-clip-bundle-id=com.sidewalkjoyllc.sidewalkjoy.Clip, app-clip-display=card">
+     6824644823 is the app's App Store ID (App Store Connect, App
+     Information); keep it matching APP_STORE_ID in scripts/build-spot-pages.js. -->
+<meta name="apple-itunes-app" content="app-id=6824644823, app-clip-bundle-id=com.sidewalkjoyllc.sidewalkjoy.Clip, app-clip-display=card">
 <title>Sidewalk Joy</title>
 <meta name="description" content="Download the Sidewalk Joy app from the App Store.">
 <meta property="og:site_name" content="Sidewalk Joy">
 <meta property="og:title" content="Sidewalk Joy">
 <meta property="og:description" content="Download the Sidewalk Joy app from the App Store.">
-<style>
-:root { color-scheme: light dark; --accent: #531a4a; }
-body { margin: 0; min-height: 100vh; min-height: 100dvh; display: grid; place-items: center;
-  padding: 24px 16px; box-sizing: border-box; text-align: center;
-  font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 26rem; }
-.brand { margin: 0 0 2rem; font-weight: 700; }
-.brand a { color: var(--accent); text-decoration: none; }
-h1 { margin: 0 0 1.5rem; font-size: 1.6rem; line-height: 1.25; }
-.button { display: inline-block; padding: .75rem 1.25rem; border-radius: 999px;
-  background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; }
-@media (prefers-color-scheme: dark) { .brand a { color: inherit; } }
-</style>
+<link rel="stylesheet" href="/landing.css">
 </head>
 <body>
 <main>
 <p class="brand"><a href="https://www.sidewalkjoy.com/">Sidewalk Joy</a></p>
 <h1>Download the Sidewalk Joy app from the App Store</h1>
-<a class="button" href="https://apps.apple.com/us/search?term=Sidewalk%20Joy">Get Sidewalk Joy on the App Store</a>
+<a class="button" href="https://apps.apple.com/app/id6824644823">Get Sidewalk Joy on the App Store</a>
 </main>
 </body>
 </html>
