@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["29W28ZG86B.com.sidewalkjoyllc.sidewalkjoy"],
+        "components": [
+          { "/": "/spot/*" }
+        ]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": ["29W28ZG86B.com.sidewalkjoyllc.sidewalkjoy.Clip"]
+  }
+}
